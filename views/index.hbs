@@ -1,2 +1,38 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+
+<h2>ver todos los usuarios</h2>
+<form action="/users">
+
+    <input type="submit" value="Ver Usuarios">
+
+</form>
+
+
+
+<h2>Registrate a la web de los papus</h2>
+<form class="form-horizontal" role="form"
+      action="/process?form=register" method="POST">
+    <input type="hidden" name="_csrf" value="{{csrf}}">
+    <div class="form-group">
+        <label for="fieldName" class="col-sm-2 control-label">Nombre</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control"
+                   id="fieldName" name="name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="fieldEmail" class="col-sm-2 control-label">Correo</label>
+        <div class="col-sm-4">
+            <input type="email" class="form-control" required
+                   id="fieldName" name="email">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-4">
+            <button type="submit" class="btn btn-default">Registro</button>
+        </div>
+    </div>
+</form>
+
+<h2>Borrar Usuario</h2>
+Borrar desde postman... "/users/xx"
